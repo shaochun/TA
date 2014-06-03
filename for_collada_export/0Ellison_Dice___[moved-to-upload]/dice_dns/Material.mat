@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="XWF.xsl"?>
+<Model material="1">
+	<Material id="1" name="DICE_DSN" shading="GOURAUD">
+		<Ambient>0.501961,0.501961,0.501961,1.000000</Ambient>
+		<Diffuse>0.501961,0.501961,0.501961,1.000000</Diffuse>
+		<Specular>0.501961,0.501961,0.501961,1.000000</Specular>
+		<Emissive>0.000000,0.000000,0.000000,1.000000</Emissive>
+		<Shininess>16.000000</Shininess>
+		<Texture path="dice_d.tga" repeatU="WRAP" repeatV="WRAP" coordinate="0"></Texture>
+		<Texture path="dice_s.tga" repeatU="WRAP" repeatV="WRAP" coordinate="0"></Texture>
+		<Texture path="dice_n.tga" repeatU="WRAP" repeatV="WRAP" coordinate="0"></Texture>
+	</Material>
+</Model>

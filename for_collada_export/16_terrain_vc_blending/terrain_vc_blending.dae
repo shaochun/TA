@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>leon</author>
+      <authoring_tool>3dsMax 9 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=1;ExportTangents=1;ExportAnimations=0;SampleAnim=0;ExportAnimClip=0;BakeMatrices=1;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+      <source_data>file://leon/upload/Ellison/10Collada/16_terrain_vc_blending/terrain_vc_blending.max</source_data>
+    </contributor>
+    <created>2009-04-14T07:41:55Z</created>
+    <modified>2009-04-14T07:41:58Z</modified>
+    <unit meter="0.0254" name="inch"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="liquid.tga" name="liquid_tga">
+      <init_from>./liquid.tga</init_from>
+    </image>
+    <image id="eight03.tga" name="eight03_tga">
+      <init_from>./eight03.tga</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="_2_-_Default" name="_2_-_Default">
+      <instance_effect url="#_2_-_Default-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_2_-_Default-fx" name="_2_-_Default">
+      <profile_COMMON>
+        <newparam sid="liquid_tga-surface">
+          <surface type="2D">
+            <init_from>liquid.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="liquid_tga-sampler">
+          <sampler2D>
+            <source>liquid_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="eight03_tga-surface">
+          <surface type="2D">
+            <init_from>eight03.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="eight03_tga-sampler">
+          <sampler2D>
+            <source>eight03_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="liquid_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+              <texture texture="eight03_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+          <extra>
+            <technique profile="FCOLLADA">
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Plane02-mesh" name="Plane02">
+      <mesh>
+        <source id="Plane02-mesh-positions">
+          <float_array id="Plane02-mesh-positions-array" count="48">-51.6216 -46.5799 0 -4.08054 -46.5799 0 6.76731 -46.5799 0 51.6216 -46.5799 0 -51.6216 -7.48223 0 -4.08054 -7.48223 0 6.76731 -7.48223 0 51.6216 -7.48223 0 -51.6216 3.21288 0 -4.08054 3.21288 0 6.76731 3.21288 0 51.6216 3.21288 0 -51.6216 46.5799 0 -4.08054 46.5799 0 6.76731 46.5799 0 51.6216 46.5799 0</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane02-mesh-normals">
+          <float_array id="Plane02-mesh-normals-array" count="48">0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane02-mesh-map-channel1">
+          <float_array id="Plane02-mesh-map-channel1-array" count="48">0 0 0 0.460476 0 0 0.565547 0 0 1 0 0 0 0.419684 0 0.460476 0.419684 0 0.565547 0.419684 0 1 0.419684 0 0 0.534488 0 0.460476 0.534488 0 0.565547 0.534488 0 1 0.534488 0 0 1 0 0.460476 1 0 0.565547 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-map-channel1-array" count="16" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane02-mesh-map-channel11">
+          <float_array id="Plane02-mesh-map-channel11-array" count="108">0 0 0 0 0 0 0 0 0 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0 0 0 0 0 0 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0 0 0 0 0 0 0 0 0 0 0 0 0.466667 0.466667 0.466667 0 0 0 0 0 0 0.466667 0.466667 0.466667 0.466667 0.466667 0.466667 0 0 0 0 0 0 0.466667 0.466667 0.466667 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-map-channel11-array" count="36" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane02-mesh-map-channel1-tangents">
+          <float_array id="Plane02-mesh-map-channel1-tangents-array" count="3">-1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-map-channel1-tangents-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane02-mesh-map-channel1-binormals">
+          <float_array id="Plane02-mesh-map-channel1-binormals-array" count="3">0 -1 0</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-map-channel1-binormals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane02-mesh-map-channel11-tangents">
+          <float_array id="Plane02-mesh-map-channel11-tangents-array" count="33">-0.5 0.5 0 -1 0 0 0 1 0 -0.376912 -0.328539 0.5 0 0 1 -0.753823 -0.657077 0 0 -1 0 0.369398 0.336965 0.5 0.738795 0.67393 0 1 0 0 0.5 -0.5 0</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-map-channel11-tangents-array" count="11" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane02-mesh-map-channel11-binormals">
+          <float_array id="Plane02-mesh-map-channel11-binormals-array" count="24">-0.707107 -0.707107 0 0 -1 0 -1 0 0 0.657077 -0.753823 0 1 0 0 -0.67393 0.738795 0 0 1 0 0.707107 0.707107 0</float_array>
+          <technique_common>
+            <accessor source="#Plane02-mesh-map-channel11-binormals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane02-mesh-vertices">
+          <input semantic="POSITION" source="#Plane02-mesh-positions"/>
+        </vertices>
+        <triangles material="_2_-_Default" count="18">
+          <input semantic="VERTEX" source="#Plane02-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane02-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane02-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXCOORD" source="#Plane02-mesh-map-channel11" offset="3" set="11"/>
+          <input semantic="TEXTANGENT" source="#Plane02-mesh-map-channel1-tangents" offset="4" set="1"/>
+          <input semantic="TEXBINORMAL" source="#Plane02-mesh-map-channel1-binormals" offset="5" set="1"/>
+          <input semantic="TEXTANGENT" source="#Plane02-mesh-map-channel11-tangents" offset="6" set="11"/>
+          <input semantic="TEXBINORMAL" source="#Plane02-mesh-map-channel11-binormals" offset="7" set="11"/>
+          <p>0 0 0 1 0 0 0 0 1 1 1 2 0 0 1 1 5 2 5 3 0 0 0 0 5 2 5 3 0 0 0 0 4 3 4 0 0 0 2 2 0 0 0 1 0 0 0 0 1 1 1 5 0 0 1 1 2 4 2 6 0 0 1 1 6 5 6 7 0 0 1 1 6 5 6 7 0 0 1 1 5 2 5 4 0 0 1 1 1 1 1 5 0 0 1 1 2 4 2 9 0 0 3 3 3 6 3 10 0 0 4 4 7 7 7 11 0 0 3 3 7 7 7 11 0 0 3 3 6 5 6 8 0 0 5 3 2 4 2 9 0 0 3 3 4 3 4 13 0 0 2 2 5 2 5 14 0 0 2 2 9 8 9 15 0 0 2 2 9 8 9 15 0 0 2 2 8 9 8 12 0 0 2 2 4 3 4 13 0 0 2 2 5 2 5 17 0 0 4 4 6 5 6 18 0 0 4 4 10 10 10 19 0 0 4 4 10 10 10 19 0 0 4 4 9 8 9 16 0 0 4 4 5 2 5 17 0 0 4 4 6 5 6 21 0 0 6 4 7 7 7 22 0 0 6 4 11 11 11 23 0 0 6 4 11 11 11 23 0 0 6 4 10 10 10 20 0 0 6 4 6 5 6 21 0 0 6 4 8 9 8 25 0 0 7 5 9 8 9 26 0 0 8 5 13 12 13 27 0 0 7 5 13 12 13 27 0 0 7 5 12 13 12 24 0 0 4 4 8 9 8 25 0 0 7 5 9 8 9 29 0 0 9 6 10 10 10 30 0 0 9 6 14 14 14 31 0 0 9 6 14 14 14 31 0 0 9 6 13 12 13 28 0 0 9 6 9 8 9 29 0 0 9 6 10 10 10 33 0 0 10 7 11 11 11 34 0 0 6 4 15 15 15 35 0 0 10 7 15 15 15 35 0 0 10 7 14 14 14 32 0 0 9 6 10 10 10 33 0 0 10 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="terrain_vc_blending.max" name="terrain_vc_blending_max">
+      <node id="Plane02-node" name="Plane02" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plane02-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_2_-_Default" target="#_2_-_Default">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#terrain_vc_blending.max"/>
+  </scene>
+</COLLADA>

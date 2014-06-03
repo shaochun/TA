@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>leon</author>
+      <authoring_tool>3dsMax 9 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=1;ExportTangents=1;ExportAnimations=0;SampleAnim=0;ExportAnimClip=0;BakeMatrices=0;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+      <source_data>file://leon/upload/Ellison/12Collada_blending_data/vertexAwesomeTest.max</source_data>
+    </contributor>
+    <created>2009-02-27T02:35:32Z</created>
+    <modified>2009-02-27T02:35:33Z</modified>
+    <unit meter="0.01" name="centimeter"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_lights>
+    <light id="ambient-environment-light" name="Ambient">
+      <technique_common>
+        <ambient>
+          <color>0.486275 0.486275 0.486275</color>
+        </ambient>
+      </technique_common>
+      <extra>
+        <technique profile="FCOLLADA">
+          <intensity>1</intensity>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="jolin-tsai-news-0003.jpg" name="jolin-tsai-news-0003_jpg">
+      <init_from>../../../%AE%E0%AD%B1/jolin-tsai-news-0003.jpg</init_from>
+    </image>
+    <image id="red.tga" name="red_tga">
+      <init_from>file://leon/upload/Ellison/12Collada_blending_data/red.tga</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="_3_-_Default" name="_3_-_Default">
+      <instance_effect url="#_3_-_Default-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_3_-_Default-fx" name="_3_-_Default">
+      <profile_COMMON>
+        <newparam sid="jolin-tsai-news-0003_jpg-surface">
+          <surface type="2D">
+            <init_from>jolin-tsai-news-0003.jpg</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="jolin-tsai-news-0003_jpg-sampler">
+          <sampler2D>
+            <source>jolin-tsai-news-0003_jpg-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="red_tga-surface">
+          <surface type="2D">
+            <init_from>red.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="red_tga-sampler">
+          <sampler2D>
+            <source>red_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588235 0.588235 0.588235 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588235 0.588235 0.588235 1</color>
+            </diffuse>
+            <specular>
+              <texture texture="jolin-tsai-news-0003_jpg-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="RGB_ZERO">
+              <texture texture="red_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Box02-mesh" name="Box02">
+      <mesh>
+        <source id="Box02-mesh-positions">
+          <float_array id="Box02-mesh-positions-array" count="24">-14.6589 -9.61988 0 14.6589 -9.61988 0 -14.6589 9.61988 0 14.6589 9.61988 0 -14.6589 -9.61988 15.3918 14.6589 -9.61988 15.3918 -14.6589 9.61988 15.3918 14.6589 9.61988 15.3918</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box02-mesh-normals">
+          <float_array id="Box02-mesh-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box02-mesh-map-channel1">
+          <float_array id="Box02-mesh-map-channel1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-map-channel1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box02-mesh-map-channel1-tangents">
+          <float_array id="Box02-mesh-map-channel1-tangents-array" count="12">1 0 0 -1 0 0 0 -1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-map-channel1-tangents-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Box02-mesh-map-channel1-binormals">
+          <float_array id="Box02-mesh-map-channel1-binormals-array" count="6">0 -1 0 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Box02-mesh-map-channel1-binormals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Box02-mesh-vertices">
+          <input semantic="POSITION" source="#Box02-mesh-positions"/>
+        </vertices>
+        <triangles material="_3_-_Default" count="12">
+          <input semantic="VERTEX" source="#Box02-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Box02-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Box02-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXTANGENT" source="#Box02-mesh-map-channel1-tangents" offset="3" set="1"/>
+          <input semantic="TEXBINORMAL" source="#Box02-mesh-map-channel1-binormals" offset="4" set="1"/>
+          <p>0 0 9 0 0 2 1 11 0 0 3 2 10 0 0 3 2 10 0 0 1 3 8 0 0 0 0 9 0 0 4 4 8 1 0 5 5 9 1 0 7 6 11 1 0 7 6 11 1 0 6 7 10 1 0 4 4 8 1 0 0 8 4 1 1 1 9 5 1 1 5 10 7 1 1 5 10 7 1 1 4 11 6 1 1 0 8 4 1 1 1 12 0 2 1 3 13 1 2 1 7 14 3 2 1 7 14 3 2 1 5 15 2 2 1 1 12 0 2 1 3 16 4 0 1 2 17 5 0 1 6 18 7 0 1 6 18 7 0 1 7 19 6 0 1 3 16 4 0 1 2 20 0 3 1 0 21 1 3 1 4 22 3 3 1 4 22 3 3 1 6 23 2 3 1 2 20 0 3 1</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="vertexAwesomeTest.max" name="vertexAwesomeTest_max">
+      <node id="Box02-node" name="Box02" type="NODE">
+        <translate>21.291 -69.5406 0</translate>
+        <instance_geometry url="#Box02-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_3_-_Default" target="#_3_-_Default">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="VisualSceneNode" type="NODE">
+        <instance_light url="#ambient-environment-light"/>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#vertexAwesomeTest.max"/>
+  </scene>
+</COLLADA>

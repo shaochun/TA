@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="XWF.xsl"?>
+<Model material="1">
+	<Material id="1" name="mat_D" shading="GOURAUD">
+		<Ambient>0.588235,0.588235,0.588235,1.000000</Ambient>
+		<Diffuse>0.588235,0.588235,0.588235,1.000000</Diffuse>
+		<Specular>0.900000,0.900000,0.900000,1.000000</Specular>
+		<Emissive>0.000000,0.000000,0.000000,0.000000</Emissive>
+		<Shininess>1.000000</Shininess>
+		<Texture path="dice_d.tga" repeatU="WRAP" repeatV="WRAP" coordinate="0"></Texture>
+	</Material>
+</Model>

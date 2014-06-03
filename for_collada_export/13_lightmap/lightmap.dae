@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>leon</author>
+      <authoring_tool>3dsMax 9 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=1;ExportTangents=1;ExportAnimations=0;SampleAnim=0;ExportAnimClip=0;BakeMatrices=1;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+      <source_data>file://leon/upload/Ellison/10Collada/13_lightmap/lightmap01_baked.max</source_data>
+    </contributor>
+    <created>2009-04-14T07:31:00Z</created>
+    <modified>2009-04-14T07:31:03Z</modified>
+    <unit meter="0.0254" name="inch"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_lights>
+    <light id="ambient-environment-light" name="Ambient">
+      <technique_common>
+        <ambient>
+          <color>0.486275 0.486275 0.486275</color>
+        </ambient>
+      </technique_common>
+      <extra>
+        <technique profile="FCOLLADA">
+          <intensity>1</intensity>
+        </technique>
+      </extra>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="map7.tga" name="map7_tga">
+      <init_from>./map7.tga</init_from>
+    </image>
+    <image id="lightmap.tga" name="lightmap_tga">
+      <init_from>./lightmap.tga</init_from>
+    </image>
+    <image id="map2.tga" name="map2_tga">
+      <init_from>./map2.tga</init_from>
+    </image>
+    <image id="map4.tga" name="map4_tga">
+      <init_from>./map4.tga</init_from>
+    </image>
+    <image id="map6.tga" name="map6_tga">
+      <init_from>./map6.tga</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="Material__42" name="Material__42">
+      <instance_effect url="#Material__42-fx"/>
+    </material>
+    <material id="Material__37" name="Material__37">
+      <instance_effect url="#Material__37-fx"/>
+    </material>
+    <material id="Material__39" name="Material__39">
+      <instance_effect url="#Material__39-fx"/>
+    </material>
+    <material id="Material__41" name="Material__41">
+      <instance_effect url="#Material__41-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Material__42-fx" name="Material__42">
+      <profile_COMMON>
+        <newparam sid="map7_tga-surface">
+          <surface type="2D">
+            <init_from>map7.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="map7_tga-sampler">
+          <sampler2D>
+            <source>map7_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="lightmap_tga-surface">
+          <surface type="2D">
+            <init_from>lightmap.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="lightmap_tga-sampler">
+          <sampler2D>
+            <source>lightmap_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="map7_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+              <texture texture="lightmap_tga-sampler" texcoord="CHANNEL2">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__37-fx" name="Material__37">
+      <profile_COMMON>
+        <newparam sid="map2_tga-surface">
+          <surface type="2D">
+            <init_from>map2.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="map2_tga-sampler">
+          <sampler2D>
+            <source>map2_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="lightmap_tga-surface">
+          <surface type="2D">
+            <init_from>lightmap.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="lightmap_tga-sampler">
+          <sampler2D>
+            <source>lightmap_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="map2_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+              <texture texture="lightmap_tga-sampler" texcoord="CHANNEL2">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__39-fx" name="Material__39">
+      <profile_COMMON>
+        <newparam sid="map4_tga-surface">
+          <surface type="2D">
+            <init_from>map4.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="map4_tga-sampler">
+          <sampler2D>
+            <source>map4_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="lightmap_tga-surface">
+          <surface type="2D">
+            <init_from>lightmap.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="lightmap_tga-sampler">
+          <sampler2D>
+            <source>lightmap_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="map4_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+              <texture texture="lightmap_tga-sampler" texcoord="CHANNEL2">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__41-fx" name="Material__41">
+      <profile_COMMON>
+        <newparam sid="map6_tga-surface">
+          <surface type="2D">
+            <init_from>map6.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="map6_tga-sampler">
+          <sampler2D>
+            <source>map6_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="lightmap_tga-surface">
+          <surface type="2D">
+            <init_from>lightmap.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="lightmap_tga-sampler">
+          <sampler2D>
+            <source>lightmap_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="map6_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+              <texture texture="lightmap_tga-sampler" texcoord="CHANNEL2">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Plane01-mesh" name="Plane01">
+      <mesh>
+        <source id="Plane01-mesh-positions">
+          <float_array id="Plane01-mesh-positions-array" count="204">-161.778 -152 0 161.778 -152 0 -161.778 152 0 161.778 152 0 11.6458 -3.82442 0 36.5347 -3.82442 0 11.6458 28.1756 0 36.5347 28.1756 0 11.6458 -3.82442 45.3333 36.5347 -3.82442 45.3333 11.6458 28.1756 45.3333 36.5347 28.1756 45.3333 77.5712 23.7899 0 98.9045 23.7899 0 77.5712 49.5677 0 98.9045 49.5677 0 77.5712 23.7899 64.8889 98.9045 23.7899 64.8889 77.5712 49.5677 64.8889 98.9045 49.5677 64.8889 27.6628 -89.3199 0 62.4122 -89.3199 0 27.6628 -47.3311 0 62.4122 -47.3311 0 27.6628 -89.3199 105.696 62.4122 -89.3199 105.696 27.6628 -47.3311 105.696 62.4122 -47.3311 105.696 -17.9275 49.6116 0 8.3212 49.6116 0 -17.9275 91.6004 0 8.3212 91.6004 0 -17.9275 49.6116 79.8397 8.3212 49.6116 79.8397 -17.9275 91.6004 79.8397 8.3212 91.6004 79.8397 -28.6136 -84.0595 0 -3.72475 -84.0595 0 -28.6136 -52.0595 0 -3.72475 -52.0595 0 -28.6136 -84.0595 45.3333 -3.72475 -84.0595 45.3333 -28.6136 -52.0595 45.3333 -3.72475 -52.0595 45.3333 71.4838 -123.063 0 96.3727 -123.063 0 71.4838 -91.0631 0 96.3727 -91.0631 0 71.4838 -123.063 85.6828 96.3727 -123.063 85.6828 71.4838 -91.0631 85.6828 96.3727 -91.0631 85.6828 113.314 -10.1004 0 138.203 -10.1004 0 113.314 21.8996 0 138.203 21.8996 0 113.314 -10.1004 45.3333 138.203 -10.1004 45.3333 113.314 21.8996 45.3333 138.203 21.8996 45.3333 -54.7968 -92.2267 0 -50.0582 -92.2267 0 -54.7968 82.696 0 -50.0582 82.696 0 -54.7968 -92.2267 51.6538 -50.0582 -92.2267 51.6538 -54.7968 82.696 51.6538 -50.0582 82.696 51.6538</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-positions-array" count="68" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane01-mesh-normals">
+          <float_array id="Plane01-mesh-normals-array" count="588">0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-normals-array" count="196" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane01-mesh-map-channel1">
+          <float_array id="Plane01-mesh-map-channel1-array" count="588">0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-map-channel1-array" count="196" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane01-mesh-map-channel2">
+          <float_array id="Plane01-mesh-map-channel2-array" count="588">0.02 0.02 0 0.533002 0.02 0 0.02 0.501996 0 0.533002 0.501996 0 0.740419 0.042549 0 0.740419 0.082011 0 0.791155 0.042549 0 0.791155 0.082011 0 0.644591 0.104557 0 0.644591 0.144019 0 0.593855 0.104557 0 0.593855 0.144019 0 0.383717 0.564943 0 0.349892 0.564943 0 0.383717 0.605814 0 0.349892 0.605814 0 0.053824 0.591887 0 0.02 0.591887 0 0.053824 0.551016 0 0.02 0.551016 0 0.166864 0.566309 0 0.111768 0.566309 0 0.166864 0.632883 0 0.111768 0.632883 0 0.258632 0.632883 0 0.203537 0.632883 0 0.258632 0.566309 0 0.203537 0.566309 0 0.458322 0.631009 0 0.416705 0.631009 0 0.458322 0.697583 0 0.416705 0.697583 0 0.39151 0.697583 0 0.349892 0.697583 0 0.39151 0.631009 0 0.349892 0.631009 0 0.645997 0.166564 0 0.645997 0.206026 0 0.696733 0.166564 0 0.696733 0.206026 0 0.717873 0.042549 0 0.717873 0.082011 0 0.667137 0.042549 0 0.667137 0.082011 0 0.98 0.414597 0 0.98 0.290579 0 0.98 0.363861 0 0.98 0.341315 0 0.844149 0.414597 0 0.844149 0.290579 0 0.844149 0.363861 0 0.844149 0.341315 0 0.582022 0.301854 0 0.582022 0.341315 0 0.632758 0.301854 0 0.632758 0.341315 0 0.791155 0.104557 0 0.791155 0.144019 0 0.740419 0.104557 0 0.740419 0.144019 0 0.523682 0.602113 0 0.523682 0.609626 0 0.801025 0.602113 0 0.801025 0.609626 0 0.801025 0.627662 0 0.801025 0.635175 0 0.523682 0.627662 0 0.523682 0.635175 0 0.727181 0.290579 0 0.727181 0.341315 0 0.655304 0.290579 0 0.655304 0.341315 0 0.98 0.206026 0 0.98 0.155289 0 0.908123 0.206026 0 0.908123 0.155289 0 0.885578 0.070736 0 0.885578 0.031274 0 0.813701 0.070736 0 0.813701 0.031274 0 0.791155 0.166564 0 0.791155 0.206026 0 0.719279 0.166564 0 0.719279 0.206026 0 0.821603 0.290579 0 0.821603 0.341315 0 0.749726 0.290579 0 0.749726 0.341315 0 0.663206 0.414597 0 0.663206 0.363861 0 0.591329 0.414597 0 0.591329 0.363861 0 0.821603 0.268033 0 0.821603 0.228572 0 0.749726 0.268033 0 0.749726 0.228572 0 0.727181 0.228572 0 0.727181 0.268033 0 0.655304 0.228572 0 0.655304 0.268033 0 0.885578 0.155289 0 0.885578 0.206026 0 0.813701 0.155289 0 0.813701 0.206026 0 0.98 0.132744 0 0.98 0.082007 0 0.908123 0.132744 0 0.908123 0.082007 0 0.98 0.268033 0 0.98 0.228572 0 0.844149 0.268033 0 0.844149 0.228572 0 0.821603 0.375136 0 0.821603 0.414597 0 0.685752 0.375136 0 0.685752 0.414597 0 0.632758 0.228572 0 0.632758 0.268033 0 0.582022 0.228572 0 0.582022 0.268033 0 0.667137 0.104557 0 0.667137 0.144019 0 0.717873 0.104557 0 0.717873 0.144019 0 0.885578 0.132744 0 0.885578 0.093282 0 0.813701 0.132744 0 0.813701 0.093282 0 0.98 0.02 0 0.98 0.059461 0 0.908123 0.02 0 0.908123 0.059461 0 0.390763 0.82566 0 0.349892 0.82566 0 0.390763 0.722777 0 0.349892 0.722777 0 0.283827 0.82566 0 0.324698 0.82566 0 0.283827 0.722777 0 0.324698 0.722777 0 0.415958 0.82566 0 0.449782 0.82566 0 0.415958 0.722777 0 0.449782 0.722777 0 0.317651 0.697583 0 0.283827 0.697583 0 0.317651 0.5947 0 0.283827 0.5947 0 0.178342 0.977441 0 0.111768 0.977441 0 0.178342 0.809859 0 0.111768 0.809859 0 0.02 0.977441 0 0.086573 0.977441 0 0.02 0.809859 0 0.086573 0.809859 0 0.203537 0.977441 0 0.258632 0.977441 0 0.203537 0.809859 0 0.258632 0.809859 0 0.075095 0.784664 0 0.02 0.784664 0 0.075095 0.617082 0 0.02 0.617082 0 0.178342 0.784664 0 0.111768 0.784664 0 0.178342 0.658077 0 0.111768 0.658077 0 0.283827 0.977441 0 0.350401 0.977441 0 0.283827 0.850854 0 0.350401 0.850854 0 0.375595 0.977441 0 0.417213 0.977441 0 0.375595 0.850854 0 0.417213 0.850854 0 0.245154 0.784664 0 0.203537 0.784664 0 0.245154 0.658077 0 0.203537 0.658077 0 0.523682 0.648702 0 0.801025 0.648702 0 0.523682 0.7306 0 0.801025 0.7306 0 0.801025 0.744126 0 0.523682 0.744126 0 0.801025 0.826024 0 0.523682 0.826024 0 0.801025 0.558529 0 0.801025 0.551016 0 0.719127 0.558529 0 0.719127 0.551016 0 0.801025 0.576565 0 0.801025 0.584078 0 0.719127 0.576565 0 0.719127 0.584078 0</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-map-channel2-array" count="196" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane01-mesh-map-channel1-tangents">
+          <float_array id="Plane01-mesh-map-channel1-tangents-array" count="12">-1 0 0 1 0 0 0 -1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-map-channel1-tangents-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane01-mesh-map-channel1-binormals">
+          <float_array id="Plane01-mesh-map-channel1-binormals-array" count="6">0 -1 0 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-map-channel1-binormals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane01-mesh-map-channel2-tangents">
+          <float_array id="Plane01-mesh-map-channel2-tangents-array" count="15">-1 0 0 0 -1 0 0 1 0 0 0 1 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-map-channel2-tangents-array" count="5" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Plane01-mesh-map-channel2-binormals">
+          <float_array id="Plane01-mesh-map-channel2-binormals-array" count="18">0 -1 0 -1 0 0 1 0 0 0 1 0 0 0 1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#Plane01-mesh-map-channel2-binormals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Plane01-mesh-vertices">
+          <input semantic="POSITION" source="#Plane01-mesh-positions"/>
+        </vertices>
+        <triangles material="Material__42" count="2">
+          <input semantic="VERTEX" source="#Plane01-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane01-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel2" offset="3" set="2"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel1-tangents" offset="4" set="1"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel1-binormals" offset="5" set="1"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel2-tangents" offset="6" set="2"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel2-binormals" offset="7" set="2"/>
+          <p>0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 0 3 2 3 3 0 0 0 0 3 2 3 3 0 0 0 0 2 3 2 2 0 0 0 0 0 0 0 0 0 0 0 0</p>
+        </triangles>
+        <triangles material="Material__37" count="48">
+          <input semantic="VERTEX" source="#Plane01-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane01-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel2" offset="3" set="2"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel1-tangents" offset="4" set="1"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel1-binormals" offset="5" set="1"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel2-tangents" offset="6" set="2"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel2-binormals" offset="7" set="2"/>
+          <p>4 4 4 4 1 0 1 1 6 5 6 6 1 0 1 1 7 6 7 7 1 0 1 1 7 6 7 7 1 0 1 1 5 7 5 5 1 0 1 1 4 4 4 4 1 0 1 1 8 8 8 8 0 0 2 1 9 9 9 9 0 0 2 1 11 10 11 11 0 0 2 1 11 10 11 11 0 0 2 1 10 11 10 10 0 0 2 1 8 8 8 8 0 0 2 1 4 12 12 80 0 1 3 1 5 13 13 81 0 1 3 1 9 14 15 83 0 1 3 1 9 14 15 83 0 1 3 1 8 15 14 82 0 1 3 1 4 12 12 80 0 1 3 1 5 16 16 68 2 1 3 0 7 17 17 69 2 1 3 0 11 18 19 71 2 1 3 0 11 18 19 71 2 1 3 0 9 19 18 70 2 1 3 0 5 16 16 68 2 1 3 0 7 20 20 77 1 1 3 2 6 21 21 76 1 1 3 2 10 22 23 78 1 1 3 2 10 22 23 78 1 1 3 2 11 23 22 79 1 1 3 2 7 20 20 77 1 1 3 2 6 24 24 73 3 1 3 3 4 25 25 72 3 1 3 3 8 26 27 74 3 1 3 3 8 26 27 74 3 1 3 3 10 27 26 75 3 1 3 3 6 24 24 73 3 1 3 3 36 100 100 36 1 0 1 1 38 101 102 38 1 0 1 1 39 102 103 39 1 0 1 1 39 102 103 39 1 0 1 1 37 103 101 37 1 0 1 1 36 100 100 36 1 0 1 1 40 104 104 40 0 0 2 1 41 105 105 41 0 0 2 1 43 106 107 43 0 0 2 1 43 106 107 43 0 0 2 1 42 107 106 42 0 0 2 1 40 104 104 40 0 0 2 1 36 108 108 96 0 1 3 1 37 109 109 97 0 1 3 1 41 110 111 99 0 1 3 1 41 110 111 99 0 1 3 1 40 111 110 98 0 1 3 1 36 108 108 96 0 1 3 1 37 112 112 84 2 1 3 0 39 113 113 85 2 1 3 0 43 114 115 87 2 1 3 0 43 114 115 87 2 1 3 0 41 115 114 86 2 1 3 0 37 112 112 84 2 1 3 0 39 116 116 93 1 1 3 2 38 117 117 92 1 1 3 2 42 118 119 94 1 1 3 2 42 118 119 94 1 1 3 2 43 119 118 95 1 1 3 2 39 116 116 93 1 1 3 2 38 120 120 89 3 1 3 3 36 121 121 88 3 1 3 3 40 122 123 90 3 1 3 3 40 122 123 90 3 1 3 3 42 123 122 91 3 1 3 3 38 120 120 89 3 1 3 3 44 124 124 120 1 0 1 1 46 125 126 122 1 0 1 1 47 126 127 123 1 0 1 1 47 126 127 123 1 0 1 1 45 127 125 121 1 0 1 1 44 124 124 120 1 0 1 1 48 128 128 116 0 0 2 1 49 129 129 117 0 0 2 1 51 130 131 119 0 0 2 1 51 130 131 119 0 0 2 1 50 131 130 118 0 0 2 1 48 128 128 116 0 0 2 1 44 132 132 112 0 1 3 1 45 133 133 113 0 1 3 1 49 134 135 115 0 1 3 1 49 134 135 115 0 1 3 1 48 135 134 114 0 1 3 1 44 132 132 112 0 1 3 1 45 136 136 45 2 1 3 0 47 137 137 47 2 1 3 0 51 138 139 51 2 1 3 0 51 138 139 51 2 1 3 0 49 139 138 49 2 1 3 0 45 136 136 45 2 1 3 0 47 140 140 109 1 1 3 2 46 141 141 108 1 1 3 2 50 142 143 110 1 1 3 2 50 142 143 110 1 1 3 2 51 143 142 111 1 1 3 2 47 140 140 109 1 1 3 2 46 144 144 46 3 1 3 3 44 145 145 44 3 1 3 3 48 146 147 48 3 1 3 3 48 146 147 48 3 1 3 3 50 147 146 50 3 1 3 3 46 144 144 46 3 1 3 3 52 148 148 52 1 0 1 1 54 149 150 54 1 0 1 1 55 150 151 55 1 0 1 1 55 150 151 55 1 0 1 1 53 151 149 53 1 0 1 1 52 148 148 52 1 0 1 1 56 152 152 56 0 0 2 1 57 153 153 57 0 0 2 1 59 154 155 59 0 0 2 1 59 154 155 59 0 0 2 1 58 155 154 58 0 0 2 1 56 152 152 56 0 0 2 1 52 156 156 128 0 1 3 1 53 157 157 129 0 1 3 1 57 158 159 131 0 1 3 1 57 158 159 131 0 1 3 1 56 159 158 130 0 1 3 1 52 156 156 128 0 1 3 1 53 160 160 100 2 1 3 0 55 161 161 101 2 1 3 0 59 162 163 103 2 1 3 0 59 162 163 103 2 1 3 0 57 163 162 102 2 1 3 0 53 160 160 100 2 1 3 0 55 164 164 125 1 1 3 2 54 165 165 124 1 1 3 2 58 166 167 126 1 1 3 2 58 166 167 126 1 1 3 2 59 167 166 127 1 1 3 2 55 164 164 125 1 1 3 2 54 168 168 105 3 1 3 3 52 169 169 104 3 1 3 3 56 170 171 106 3 1 3 3 56 170 171 106 3 1 3 3 58 171 170 107 3 1 3 3 54 168 168 105 3 1 3 3</p>
+        </triangles>
+        <triangles material="Material__39" count="36">
+          <input semantic="VERTEX" source="#Plane01-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane01-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel2" offset="3" set="2"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel1-tangents" offset="4" set="1"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel1-binormals" offset="5" set="1"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel2-tangents" offset="6" set="2"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel2-binormals" offset="7" set="2"/>
+          <p>12 28 28 12 1 0 4 0 14 29 30 14 1 0 4 0 15 30 31 15 1 0 4 0 15 30 31 15 1 0 4 0 13 31 29 13 1 0 4 0 12 28 28 12 1 0 4 0 16 32 32 16 0 0 4 3 17 33 33 17 0 0 4 3 19 34 35 19 0 0 4 3 19 34 35 19 0 0 4 3 18 35 34 18 0 0 4 3 16 32 32 16 0 0 4 3 12 36 36 144 0 1 4 4 13 37 37 145 0 1 4 4 17 38 39 147 0 1 4 4 17 38 39 147 0 1 4 4 16 39 38 146 0 1 4 4 12 36 36 144 0 1 4 4 13 40 40 132 2 1 2 4 15 41 41 133 2 1 2 4 19 42 43 135 2 1 2 4 19 42 43 135 2 1 2 4 17 43 42 134 2 1 2 4 13 40 40 132 2 1 2 4 15 44 44 141 1 1 0 4 14 45 45 140 1 1 0 4 18 46 47 142 1 1 0 4 18 46 47 142 1 1 0 4 19 47 46 143 1 1 0 4 15 44 44 141 1 1 0 4 14 48 48 137 3 1 1 4 12 49 49 136 3 1 1 4 16 50 51 138 3 1 1 4 16 50 51 138 3 1 1 4 18 51 50 139 3 1 1 4 14 48 48 137 3 1 1 4 20 52 52 20 1 0 4 0 22 53 54 22 1 0 4 0 23 54 55 23 1 0 4 0 23 54 55 23 1 0 4 0 21 55 53 21 1 0 4 0 20 52 52 20 1 0 4 0 24 56 56 24 0 0 4 3 25 57 57 25 0 0 4 3 27 58 59 27 0 0 4 3 27 58 59 27 0 0 4 3 26 59 58 26 0 0 4 3 24 56 56 24 0 0 4 3 20 60 60 160 0 1 4 4 21 61 61 161 0 1 4 4 25 62 63 163 0 1 4 4 25 62 63 163 0 1 4 4 24 63 62 162 0 1 4 4 20 60 60 160 0 1 4 4 21 64 64 148 2 1 2 4 23 65 65 149 2 1 2 4 27 66 67 151 2 1 2 4 27 66 67 151 2 1 2 4 25 67 66 150 2 1 2 4 21 64 64 148 2 1 2 4 23 68 68 157 1 1 0 4 22 69 69 156 1 1 0 4 26 70 71 158 1 1 0 4 26 70 71 158 1 1 0 4 27 71 70 159 1 1 0 4 23 68 68 157 1 1 0 4 22 72 72 153 3 1 1 4 20 73 73 152 3 1 1 4 24 74 75 154 3 1 1 4 24 74 75 154 3 1 1 4 26 75 74 155 3 1 1 4 22 72 72 153 3 1 1 4 28 76 76 28 1 0 4 0 30 77 78 30 1 0 4 0 31 78 79 31 1 0 4 0 31 78 79 31 1 0 4 0 29 79 77 29 1 0 4 0 28 76 76 28 1 0 4 0 32 80 80 32 0 0 4 3 33 81 81 33 0 0 4 3 35 82 83 35 0 0 4 3 35 82 83 35 0 0 4 3 34 83 82 34 0 0 4 3 32 80 80 32 0 0 4 3 28 84 84 176 0 1 4 4 29 85 85 177 0 1 4 4 33 86 87 179 0 1 4 4 33 86 87 179 0 1 4 4 32 87 86 178 0 1 4 4 28 84 84 176 0 1 4 4 29 88 88 164 2 1 2 4 31 89 89 165 2 1 2 4 35 90 91 167 2 1 2 4 35 90 91 167 2 1 2 4 33 91 90 166 2 1 2 4 29 88 88 164 2 1 2 4 31 92 92 173 1 1 0 4 30 93 93 172 1 1 0 4 34 94 95 174 1 1 0 4 34 94 95 174 1 1 0 4 35 95 94 175 1 1 0 4 31 92 92 173 1 1 0 4 30 96 96 169 3 1 1 4 28 97 97 168 3 1 1 4 32 98 99 170 3 1 1 4 32 98 99 170 3 1 1 4 34 99 98 171 3 1 1 4 30 96 96 169 3 1 1 4</p>
+        </triangles>
+        <triangles material="Material__41" count="12">
+          <input semantic="VERTEX" source="#Plane01-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Plane01-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXCOORD" source="#Plane01-mesh-map-channel2" offset="3" set="2"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel1-tangents" offset="4" set="1"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel1-binormals" offset="5" set="1"/>
+          <input semantic="TEXTANGENT" source="#Plane01-mesh-map-channel2-tangents" offset="6" set="2"/>
+          <input semantic="TEXBINORMAL" source="#Plane01-mesh-map-channel2-binormals" offset="7" set="2"/>
+          <p>60 172 172 60 1 0 1 1 62 173 174 62 1 0 1 1 63 174 175 63 1 0 1 1 63 174 175 63 1 0 1 1 61 175 173 61 1 0 1 1 60 172 172 60 1 0 1 1 64 176 176 64 0 0 2 1 65 177 177 65 0 0 2 1 67 178 179 67 0 0 2 1 67 178 179 67 0 0 2 1 66 179 178 66 0 0 2 1 64 176 176 64 0 0 2 1 60 180 180 192 0 1 3 1 61 181 181 193 0 1 3 1 65 182 183 195 0 1 3 1 65 182 183 195 0 1 3 1 64 183 182 194 0 1 3 1 60 180 180 192 0 1 3 1 61 184 184 180 2 1 1 5 63 185 185 181 2 1 1 5 67 186 187 183 2 1 1 5 67 186 187 183 2 1 1 5 65 187 186 182 2 1 1 5 61 184 184 180 2 1 1 5 63 188 188 189 1 1 3 2 62 189 189 188 1 1 3 2 66 190 191 190 1 1 3 2 66 190 191 190 1 1 3 2 67 191 190 191 1 1 3 2 63 188 188 189 1 1 3 2 62 192 192 185 3 1 2 5 60 193 193 184 3 1 2 5 64 194 195 186 3 1 2 5 64 194 195 186 3 1 2 5 66 195 194 187 3 1 2 5 62 192 192 185 3 1 2 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="lightmap01_baked.max" name="lightmap01_baked_max">
+      <node id="Plane01-node" name="Plane01" type="NODE">
+        <matrix>1 0 0 -1.82427 0 1 0 43.3698 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#Plane01-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__42" target="#Material__42">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+              <instance_material symbol="Material__37" target="#Material__37">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+              <instance_material symbol="Material__39" target="#Material__39">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+              <instance_material symbol="Material__41" target="#Material__41">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="VisualSceneNode" type="NODE">
+        <instance_light url="#ambient-environment-light"/>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#lightmap01_baked.max"/>
+  </scene>
+</COLLADA>

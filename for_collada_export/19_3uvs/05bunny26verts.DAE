@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>leon</author>
+      <authoring_tool>3dsMax 9 - Feeling ColladaMax v3.05B.</authoring_tool>
+      <comments>ColladaMax Export Options: ExportNormals=1;ExportEPolyAsTriangles=1;ExportXRefs=1;ExportSelected=1;ExportTangents=1;ExportAnimations=0;SampleAnim=0;ExportAnimClip=0;BakeMatrices=1;ExportRelativePaths=1;AnimStart=0;AnimEnd=3.33333;</comments>
+      <source_data>file:///C:/Documents%20and%20Settings/leon/My%20Documents/3dsmax/downloads/Bunny.max</source_data>
+    </contributor>
+    <created>2009-05-20T03:51:28Z</created>
+    <modified>2009-05-20T03:51:29Z</modified>
+    <unit meter="0.01" name="centimeter"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="fur.tga" name="fur_tga">
+      <init_from>./fur.tga</init_from>
+    </image>
+    <image id="ShoePrint.tga" name="ShoePrint_tga">
+      <init_from>./ShoePrint.tga</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="_3_texCoord_Fur_normal" name="_3_texCoord_Fur_normal">
+      <instance_effect url="#_3_texCoord_Fur_normal-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_3_texCoord_Fur_normal-fx" name="_3_texCoord_Fur_normal">
+      <profile_COMMON>
+        <newparam sid="fur_tga-surface">
+          <surface type="2D">
+            <init_from>fur.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="fur_tga-sampler">
+          <sampler2D>
+            <source>fur_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="ShoePrint_tga-surface">
+          <surface type="2D">
+            <init_from>ShoePrint.tga</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="ShoePrint_tga-sampler">
+          <sampler2D>
+            <source>ShoePrint_tga-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <ambient>
+              <color>0.588235 0.588235 0.588235 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="fur_tga-sampler" texcoord="CHANNEL1">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+              <texture texture="ShoePrint_tga-sampler" texcoord="CHANNEL2">
+                <extra>
+                  <technique profile="MAYA">
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <rotateUV>0</rotateUV>
+                  </technique>
+                  <technique profile="MAX3D">
+                    <amount>1</amount>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0.415939</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <reflectivity>
+              <float>1</float>
+            </reflectivity>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+              <emission_level>
+                <float>0</float>
+              </emission_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="MAX3D">
+          <faceted>0</faceted>
+          <double_sided>0</double_sided>
+          <wireframe>0</wireframe>
+          <face_map>0</face_map>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Bunny26verts-mesh" name="Bunny26verts">
+      <mesh>
+        <source id="Bunny26verts-mesh-positions">
+          <float_array id="Bunny26verts-mesh-positions-array" count="78">-13.005 3.85245 -20.3579 17.9179 9.01676 -14.9014 -13.005 -10.4656 1.69123 22.0733 -0.295904 1.69123 -13.2834 -10.4055 23.0246 20.1245 0.069122 23.0246 6.0455 13.5914 -23.0246 -27.4159 -5.74804 -8.97543 6.04551 -0.282749 -8.97543 -27.4159 -13.7821 12.3579 6.04551 -8.81331 12.3579 27.4159 11.1171 -8.97543 27.4159 6.74628 12.3579 -27.4159 2.69922 -16.9754 22.0733 13.7821 -16.9754 6.0455 7.31215 -20.3579 -13.005 -4.38172 -8.97543 -27.4159 -11.7736 1.69124 22.0733 5.29985 -8.97543 6.0455 -6.54175 1.69124 -13.005 -12.5399 12.3579 -27.4159 -11.7736 23.0246 22.0733 -2.439 12.3579 4.93188 -6.30135 23.0246 27.4159 7.9779 1.69124 25.1887 8.23602 23.0246</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-positions-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bunny26verts-mesh-normals">
+          <float_array id="Bunny26verts-mesh-normals-array" count="78">0.372587 -0.643468 -0.668676 0.326806 -0.664423 -0.672116 0.397223 -0.418968 -0.816505 0.413313 -0.641625 -0.646134 0.088573 -0.790603 -0.605889 0.128834 -0.834202 -0.536199 0.03154 -0.816304 -0.57676 -0.114632 -0.683091 -0.721281 0.136003 -0.929018 -0.344134 0.085044 -0.936997 -0.338828 0.240911 -0.818617 -0.521371 0.491155 -0.691834 -0.529275 0.596872 -0.760195 -0.256608 0.264272 -0.899815 -0.347122 0.138651 -0.990332 0.004392 0.090268 -0.995916 0.001566 0.142881 -0.968707 0.202956 0.094704 -0.978313 0.184215 0.288823 -0.957052 0.025139 0.640382 -0.765346 0.064465 0.627295 -0.729271 0.273247 0.293494 -0.923217 0.248055 0.655424 -0.600166 -0.458499 0.8345 -0.538857 -0.115077 0.852446 -0.516111 0.083455 0.824289 -0.511132 0.2435</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-normals-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bunny26verts-mesh-map-channel1">
+          <float_array id="Bunny26verts-mesh-map-channel1-array" count="78">0.103604 0.38713 -0.169499 0.127769 0.218502 -0.154137 0.186882 0.386997 -0.134475 0.195767 0.193009 -0.123936 0.256619 0.398321 -0.068664 0.266248 0.2106 -0.090567 0.087674 0.278911 -0.152763 0.151069 0.472886 -0.166129 0.154495 0.284063 -0.160051 0.221779 0.472812 -0.100309 0.225919 0.286359 -0.104351 0.149434 0.155836 -0.133726 0.240005 0.128584 -0.110291 0.100143 0.467105 -0.180661 0.119838 0.19685 -0.132879 0.10674 0.284286 -0.165247 0.15243 0.391218 -0.166004 0.18576 0.472049 -0.128403 0.156148 0.195451 -0.152769 0.189791 0.283822 -0.120656 0.224983 0.390512 -0.107622 0.253062 0.481142 -0.066097 0.234563 0.192858 -0.115725 0.254922 0.296714 -0.074118 0.194051 0.143288 -0.113575 0.27571 0.161747 -0.081996</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-map-channel1-array" count="26" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bunny26verts-mesh-map-channel2">
+          <float_array id="Bunny26verts-mesh-map-channel2-array" count="204">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.000691 -0.005349 0 0.999309 -0.005349 0 0.999309 0.994651 0 -0.000691 0.994651 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.000691 -0.005349 0 0.999309 -0.005349 0 0.999309 0.994651 0 -0.000691 0.994651 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.000691 -0.005349 0 0.999309 -0.005349 0 0.999309 0.994651 0 -0.000691 0.994651 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-map-channel2-array" count="68" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bunny26verts-mesh-map-channel1-tangents">
+          <float_array id="Bunny26verts-mesh-map-channel1-tangents-array" count="78">-0.008417 0.716343 -0.694028 -0.051295 0.697581 -0.714537 -0.097665 0.865176 -0.491457 0.077307 0.730975 -0.676423 -0.047015 0.604057 -0.795086 0.004556 0.540529 -0.839843 -0.01782 0.575615 -0.815658 -0.090953 0.730234 -0.677115 -0.004008 0.34609 -0.935884 0.000108 0.339954 -0.940082 0.008929 0.538862 -0.841956 -0.011029 0.602249 -0.797456 0.04136 0.346667 -0.930788 -0.019021 0.354184 -0.932601 -0.081389 -0.015809 -0.995281 -0.075672 -0.008423 -0.995195 -0.100633 -0.218181 -0.970527 -0.129542 -0.195584 -0.972093 -0.060202 -0.044242 -0.992615 -0.012805 -0.092831 -0.9749 -0.059854 -0.393796 -0.913595 -0.065549 -0.278306 -0.958249 0.025778 0.621174 -0.776253 0.121392 0.383298 -0.914533 0.021161 -0.114528 -0.924427 -0.094316 -0.548041 -0.831117</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-map-channel1-tangents-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bunny26verts-mesh-map-channel1-binormals">
+          <float_array id="Bunny26verts-mesh-map-channel1-binormals-array" count="78">0.927959 0.264892 0.262154 0.943698 0.268017 0.19391 0.912508 0.275018 0.30281 0.907294 0.229871 0.352103 0.994959 0.098946 0.016339 0.991656 0.105888 0.07353 0.999343 0.036059 0.003614 0.989236 -0.012016 -0.145838 0.9907 0.128941 0.043439 0.996377 0.079938 0.029023 0.970506 0.198247 0.137173 0.871002 0.397758 0.288346 0.801257 0.548177 0.23977 0.96426 0.253628 0.076655 0.986983 0.137814 -0.082899 0.993028 0.089886 -0.076268 0.984609 0.118267 -0.128681 0.987041 0.068197 -0.145255 0.95547 0.286488 -0.070718 0.767945 0.636601 -0.070705 0.776462 0.558609 -0.291653 0.953711 0.264981 -0.142198 0.754816 0.499688 0.424928 0.537443 0.74995 0.385657 0.522321 0.847656 -0.09306 0.558258 0.662114 -0.499952</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-map-channel1-binormals-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bunny26verts-mesh-map-channel2-tangents">
+          <float_array id="Bunny26verts-mesh-map-channel2-tangents-array" count="39">0 0 1 0.990197 0.138629 0.017086 0.995906 0.090391 -0.000000 0.998078 0.056516 -0.025409 0.990371 0.135864 0.026584 0.796921 0.598766 0.079814 0.956123 0.291622 -0.028027 0.953527 0.299666 -0.029914 0.852448 0.506726 0.128691 -0.058317 0.277873 -0.95884 0.140264 0.034013 -0.98953 0.064688 -0.00669 -0.997882 -0.040666 0.349201 -0.936165</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-map-channel2-tangents-array" count="13" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Bunny26verts-mesh-map-channel2-binormals">
+          <float_array id="Bunny26verts-mesh-map-channel2-binormals-array" count="114">-0.865395 -0.501089 0 -0.897328 -0.441365 0 -0.725688 -0.688023 0 -0.840678 -0.541536 0 -0.993783 -0.111337 0 -0.988283 -0.15263 0 -0.999254 -0.038609 0 -0.98621 0.1655 0 0.031833 -0.343084 0.938765 0.030627 -0.337441 0.940848 0.053338 -0.57485 0.816518 0.050673 -0.534461 0.843673 -0.959321 -0.282319 0 -0.815409 -0.578885 0 0.092975 -0.252138 0.963214 0.126448 -0.324485 0.937401 0.180734 -0.489957 0.852806 0.179165 -0.514387 0.838633 -0.989454 -0.14485 0 -0.959475 -0.281794 0 -0.990341 -0.138652 0 -0.995917 -0.090268 0 -0.995906 -0.090391 0 -0.989297 -0.145918 0 -0.995347 -0.096353 0 -0.957355 -0.288914 0 0.800214 0.587273 0.121522 0.75514 0.64272 0.129132 0.955195 0.289838 0.059977 0.96359 0.261519 0.055692 -0.758122 -0.652112 0 -0.953003 -0.302963 0 -0.766941 -0.641717 0 -0.675333 -0.737512 0 -0.786531 -0.61755 0 -0.542461 -0.840081 0 -0.517918 -0.855431 0 -0.526994 -0.849869 0</float_array>
+          <technique_common>
+            <accessor source="#Bunny26verts-mesh-map-channel2-binormals-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Bunny26verts-mesh-vertices">
+          <input semantic="POSITION" source="#Bunny26verts-mesh-positions"/>
+        </vertices>
+        <triangles material="_3_texCoord_Fur_normal" count="34">
+          <input semantic="VERTEX" source="#Bunny26verts-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Bunny26verts-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#Bunny26verts-mesh-map-channel1" offset="2" set="1"/>
+          <input semantic="TEXCOORD" source="#Bunny26verts-mesh-map-channel2" offset="3" set="2"/>
+          <input semantic="TEXTANGENT" source="#Bunny26verts-mesh-map-channel1-tangents" offset="4" set="1"/>
+          <input semantic="TEXBINORMAL" source="#Bunny26verts-mesh-map-channel1-binormals" offset="5" set="1"/>
+          <input semantic="TEXTANGENT" source="#Bunny26verts-mesh-map-channel2-tangents" offset="6" set="2"/>
+          <input semantic="TEXBINORMAL" source="#Bunny26verts-mesh-map-channel2-binormals" offset="7" set="2"/>
+          <p>1 0 1 0 0 0 0 0 15 1 15 1 1 1 0 1 6 2 6 2 2 2 0 2 6 2 6 2 2 2 0 2 14 3 14 3 3 3 0 3 1 0 1 0 0 0 0 0 0 4 0 4 4 4 0 4 16 5 16 5 5 5 0 5 7 6 7 6 6 6 0 6 7 6 7 6 6 6 0 6 13 7 13 7 7 7 0 7 0 4 0 4 4 4 0 4 2 8 2 8 8 8 1 8 17 9 17 9 9 9 2 9 7 6 7 10 6 6 3 10 7 6 7 10 6 6 3 10 16 5 16 11 5 5 4 11 2 8 2 8 8 8 1 8 0 4 0 12 4 4 0 4 15 1 15 13 1 1 0 1 8 10 8 14 10 10 0 12 8 10 8 14 10 10 0 12 16 5 16 15 5 5 0 5 0 4 0 12 4 4 0 4 1 0 1 16 0 0 0 0 18 11 18 17 11 11 0 13 8 10 8 18 10 10 0 12 8 10 8 18 10 10 0 12 15 1 15 19 1 1 0 1 1 0 1 16 0 0 0 0 3 12 3 20 12 12 5 14 19 13 19 21 13 13 6 15 8 10 8 22 10 10 7 16 8 10 8 22 10 10 7 16 18 11 18 23 11 11 8 17 3 12 3 20 12 12 5 14 2 8 2 24 8 8 0 18 16 5 16 25 5 5 0 5 8 10 8 26 10 10 0 12 8 10 8 26 10 10 0 12 19 13 19 27 13 13 0 19 2 8 2 24 8 8 0 18 2 8 2 28 8 8 0 18 20 14 20 29 14 14 0 20 9 15 9 30 15 15 0 21 9 15 9 30 15 15 0 21 17 9 17 31 9 9 0 22 2 8 2 28 8 8 0 18 4 16 4 32 16 16 0 23 21 17 21 33 17 17 0 24 9 15 9 34 15 15 0 21 9 15 9 34 15 15 0 21 20 14 20 35 14 14 0 20 4 16 4 32 16 16 0 23 2 8 2 36 8 8 0 18 19 13 19 37 13 13 0 19 10 18 10 38 18 18 0 25 10 18 10 38 18 18 0 25 20 14 20 39 14 14 0 20 2 8 2 36 8 8 0 18 3 12 3 40 12 12 9 26 22 19 22 41 19 19 10 27 10 18 10 42 18 18 11 28 10 18 10 42 18 18 11 28 19 13 19 43 13 13 12 29 3 12 3 40 12 12 9 26 5 20 5 44 20 20 0 30 23 21 23 45 21 21 0 31 10 18 10 46 18 18 0 25 10 18 10 46 18 18 0 25 22 19 22 47 19 19 0 32 5 20 5 44 20 20 0 30 4 16 4 48 16 16 0 23 20 14 20 49 14 14 0 20 10 18 10 50 18 18 0 25 10 18 10 50 18 18 0 25 23 21 23 51 21 21 0 31 4 16 4 48 16 16 0 23 1 0 1 52 0 0 0 0 14 3 14 53 3 3 0 3 11 22 11 54 22 22 0 33 11 22 11 54 22 22 0 33 18 11 18 55 11 11 0 13 1 0 1 52 0 0 0 0 3 12 3 56 12 12 0 34 18 11 18 57 11 11 0 13 11 22 11 58 22 22 0 33 11 22 11 58 22 22 0 33 24 23 24 59 23 23 0 35 3 12 3 56 12 12 0 34 3 12 3 60 12 12 0 34 24 23 24 61 23 23 0 35 12 24 12 62 24 24 0 36 12 24 12 62 24 24 0 36 22 19 22 63 19 19 0 32 3 12 3 60 12 12 0 34 5 20 5 64 20 20 0 30 22 19 22 65 19 19 0 32 12 24 12 66 24 24 0 36 12 24 12 66 24 24 0 36 25 25 25 67 25 25 0 37 5 20 5 64 20 20 0 30</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Bunny.max" name="Bunny_max">
+      <node id="Bunny26verts-node" name="Bunny26verts" type="NODE">
+        <matrix>1 0 0 -493.776 0 1 0 -28.4406 0 0 1 19.6421 0 0 0 1</matrix>
+        <instance_geometry url="#Bunny26verts-mesh">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="_3_texCoord_Fur_normal" target="#_3_texCoord_Fur_normal">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="1"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <extra>
+        <technique profile="FCOLLADA">
+          <start_time>0</start_time>
+          <end_time>3.33333</end_time>
+        </technique>
+      </extra>
+      <extra>
+        <technique profile="MAX3D">
+          <frame_rate>30</frame_rate>
+        </technique>
+      </extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Bunny.max"/>
+  </scene>
+</COLLADA>
