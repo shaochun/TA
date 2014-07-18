@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="XWF.xsl"?>
-<Model name="" version="1.0">
-	<FrameInfo rate="30.00"></FrameInfo>
-	<Render node="2" mesh="1" material="1"></Render>
-	<Animation motion="0" morph="0" material="0"></Animation>
-	<Coordinate axis="LEFT"></Coordinate>
-	<Export editor="3DStudioMax"></Export>
-</Model>
