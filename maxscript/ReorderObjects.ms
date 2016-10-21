@@ -1,8 +1,14 @@
 -------------------------------------------------------
+-- TARGET
+--    for Max 2017, previous versions should work as well
+--
 -- HOW TO USE
--- drag this script into Max
---   this script will create a trackview named 'reorder',
---   please minimize it when using the script.
+--   drag this script into Max
+--   1) this script will create a trackview named 'reorder',
+--      please minimize it while using the script.
+--   2) for hierarchical structures, dummy/point works better than group,
+--      although groups are treated as dummies in Max.
+--      it's recommeneded to use dummy/point to arrange your hierarchy
 -------------------------------------------------------
 
 rollout reorder_objs "Object Reordering" width: 250
@@ -16,9 +22,9 @@ rollout reorder_objs "Object Reordering" width: 250
 	-----------------------------------------------------------------------------------------
 	group "About"
 	(
-		label rtv1 "Object Reordering"
-		label rtv2 "Version 1.0 (2016.10.20)"
-		label rtv3 "by Shaochun"
+		label a1 "Object Reordering"
+		label a2 "Version 1.0.1 (2016.10.21)"
+		label a3 "by Shaochun"
 	)
 	
 	-----------------------------------------------------------------------------------------
