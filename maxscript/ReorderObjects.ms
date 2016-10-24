@@ -23,7 +23,7 @@ rollout reorder_objs "Object Reordering" width: 250
 	group "About"
 	(
 		label a1 "Object Reordering"
-		label a2 "Version 1.0.1 (2016.10.21)"
+		label a2 "Version 1.1 (2016.10.21)"
 		label a3 "by Shaochun"
 	)
 	
