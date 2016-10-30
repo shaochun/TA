@@ -6,9 +6,9 @@
 --   drag this script into Max
 --   1) this script will create a trackview named 'reorder',
 --      please minimize it while using the script.
---   2) for hierarchical structures, dummy/point works better than group,
---      although groups are treated as dummies in Max.
---      it's recommeneded to use dummy/point to arrange your hierarchy
+--   2) for grouping purposes,  use hierarchical structures(dummy/point as parent) 
+--      instead of Max Groups. 
+--      parents can be selected (without the children) and get reordered as well.
 -------------------------------------------------------
 
 rollout reorder_objs "Object Reordering" width: 250
